@@ -30,10 +30,8 @@ wheels/
 *.db
 *.sqlite3
 
-# Pytest / Coverage
-.pytest_cache/
-.coverage
-htmlcov/
+# Testing Prompts
+tests/testing_prompts/
 
 # macOS
 .DS_Store

@@ -119,11 +119,11 @@ Pelanggan kirim pesan
 | Komponen | Pilihan |
 |----------|---------|
 | WhatsApp API | WhatsApp Business API (via Twilio / WABA langsung) |
-| AI/NLP | OpenAI GPT-4o (dengan function calling) |
-| Backend | Node.js / Python FastAPI |
-| Database Produk | Supabase / Google Sheets (tahap awal) |
+| AI/NLP | Qwen3-8B (via Ollama secara lokal) |
+| Backend | Python FastAPI |
+| Database | Supabase (PostgreSQL) |
 | Live Chat Platform | Respond.io / Wati.io / Qiscus |
-| Hosting | Railway / Vercel / VPS |
+| Hosting | Local (Development) / Railway / Vercel |
 
 ---
 
@@ -187,5 +187,7 @@ faqs
 |--------|----------|
 | Bot salah jawab harga | Tambahkan disclaimer "harga bisa berubah, konfirmasi ke CS" |
 | Pelanggan frustasi dengan bot | Sediakan opsi "Bicara ke CS" di setiap langkah |
-| Data produk tidak up-to-date | Buat sistem update database yang mudah (Google Sheets) |
+| Data produk tidak up-to-date | Update langsung via Supabase Dashboard |
 | WhatsApp API rate limit | Implementasi queue system |
+| Ollama crash / tidak aktif | Fallback message: "Sistem sedang kendala, menghubungkan ke CS" |
+| RAM tidak cukup untuk Qwen3-8B | Switch ke Qwen3-4B via `.env` tanpa ubah kode |
